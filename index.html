@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <script src="https://kit.fontawesome.com/552e1619ab.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: #1A120B;
+            color: #E5E5CB;
+            font-size: 100px;
+        }
+        .square{
+            box-sizing: border-box;
+            height: 250px;
+            width: 250px;
+            border: 5px solid #D5CEA3;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            box-shadow: 0 0 0 5px;
+            cursor: pointer;
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+        nav{
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        nav a{
+            color: #e5e5cb60;
+        }
+        nav a:hover{
+            color: #E5E5CB;
+            cursor: pointer;
+        }
+        #restartButton{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        #restartButton button{
+            color: #1A120B;
+            background-color: #D5CEA3;
+            border-radius: 5px;
+            border-color: transparent;
+            cursor: pointer;
+        }
+        #restartButton button:hover{
+            color: #D5CEA3;
+            background-color: #1A120B;
+            box-shadow: #D5CEA3 0px 1px 4px, #D5CEA3 0px 0px 0px 3px;
+        }
+        #play-as{
+            position: absolute;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            background-color: #3C2A21;
+            border-radius: 10px;
+            box-sizing: border-box;
+            height: 300px;
+            width: 500px;
+        }
+        #options{
+            display: flex;
+        }
+        #options h2{
+            padding: 30px;
+            color: #e5e5cb77;
+        }
+        #options h2:hover{
+            color: #E5E5CB;
+            cursor: pointer;
+        }
+        #status{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 style="margin: 0;">TIC-TAC-TOE</h1>
+        <a href=""><i class="fa-solid fa-house"></i></a>
+    </nav>
+    <div class="row" id="row1">
+        <div class="square" id="sq0"></div>
+        <div class="square" id="sq1"></div>
+        <div class="square" id="sq2"></div>
+    </div>
+    <div class="row" id="row2">
+        <div class="square" id="sq3"></div>
+        <div class="square" id="sq4"></div>
+        <div class="square" id="sq5"></div>
+    </div>
+    <div class="row" id="row3">
+        <div class="square" id="sq6"></div>
+        <div class="square" id="sq7"></div>
+        <div class="square" id="sq8"></div>
+    </div>
+    <div id="play-as">
+        <h1>PLAY AS</h1>
+        <div id="options">
+            <h2 id="choiceX">X</h2>
+            <h2 id="choiceO">O</h2>
+        </div>
+    </div>
+    <h5 id="status">X'S TURN</h5>
+    <div id="restartButton"><button>RESTART</button></div>
+    <script src="script.js"></script>
+    </body>
+</html>
