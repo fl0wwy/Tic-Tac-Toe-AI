@@ -194,16 +194,29 @@ function humanMove() {
             if (checkWinner() == null) {
                 changeSides();
                 aiMove();
-                if (checkWinner() != null) {
+                if (checkWinner() == null) {
+                    changeSides();
+                } 
+                else if (checkWinner() == 0) {
+                    gameRunning = false;
+                    statusText.textContent = "DRAW";  
+                    return; 
+                }
+                else {
                     gameRunning = false;
                     statusText.textContent = `${currentPlayer} WINS`;
                     return;
-                } 
-                changeSides();
+                }
+                
+            }
+            else if (checkWinner() == 0){
+                gameRunning = false;
+                statusText.textContent = "DRAW";
             }
             else{
                 gameRunning = false;
-                statusText.textContent = `${currentPlayer} WINS`;
+                statusText.textContent = `${currentPlayer} WINS`; 
+                return; 
             }
         }
     }
