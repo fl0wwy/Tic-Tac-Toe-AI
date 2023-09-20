@@ -7,15 +7,15 @@
     <script src="https://kit.fontawesome.com/552e1619ab.js" crossorigin="anonymous"></script>
     <style>
         body{
-            background-color: #1A120B;
-            color: #E5E5CB;
+            background-color: #434343;
+            color: azure;
             font-size: 100px;
         }
         .square{
             box-sizing: border-box;
-            height: 250px;
-            width: 250px;
-            border: 5px solid #D5CEA3;
+            height: 20vh;
+            width: 20vh;
+            border: 5px solid azure;
             border-radius: 5px;
             justify-content: center;
             align-items: center;
@@ -28,6 +28,7 @@
             justify-content: center;
         }
         nav{
+            margin-top: 50px;
             font-size: 30px;
             display: flex;
             flex-direction: column;
@@ -35,10 +36,10 @@
             margin-bottom: 50px;
         }
         nav a{
-            color: #e5e5cb60;
+            color: rgba(240, 255, 255, 0.349);
         }
         nav a:hover{
-            color: #E5E5CB;
+            color: azure;
             cursor: pointer;
         }
         #restartButton{
@@ -47,16 +48,16 @@
             margin-top: 50px;
         }
         #restartButton button{
-            color: #1A120B;
-            background-color: #D5CEA3;
+            color: #434343;
+            background-color: azure;
             border-radius: 5px;
             border-color: transparent;
             cursor: pointer;
         }
         #restartButton button:hover{
-            color: #D5CEA3;
-            background-color: #1A120B;
-            box-shadow: #D5CEA3 0px 1px 4px, #D5CEA3 0px 0px 0px 3px;
+            color: azure;
+            background-color: #434343;
+            box-shadow: azure 0px 1px 4px, azure 0px 0px 0px 3px;
         }
         #play-as{
             position: absolute;
@@ -67,7 +68,9 @@
             left: 50%;
             transform: translate(-50%, -50%);
             align-items: center;
-            background-color: #3C2A21;
+            background-color: #434343;
+            border: 1px solid azure;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             border-radius: 10px;
             box-sizing: border-box;
             height: 300px;
@@ -78,16 +81,68 @@
         }
         #options h2{
             padding: 30px;
-            color: #e5e5cb77;
+            color: rgba(240, 255, 255, 0.349);
         }
         #options h2:hover{
-            color: #E5E5CB;
+            color: azure;
             cursor: pointer;
         }
         #status{
             font-size: 30px;
             text-align: center;
             margin-top: 20px;
+        }
+
+        @media screen and (max-height: 768px){
+            .square{
+                height: 15vh;
+                width: 25vw;
+            }
+
+            #play-as{
+                width: 50vw;
+                height: 25vh;
+            }
+
+            #play-as h1{
+                font-size: 25px;
+            }
+
+            #play-as h2{
+                font-size: 25px;
+                padding: 0 10px 0 10px;
+            }
+
+            nav{
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (orientation: landscape) and (max-height: 900px){
+            .square{
+                height: 20vh;
+                width: 10vw;
+            }
+
+            #play-as{
+                display: flex;
+                justify-content: center;
+                width: 25vw;
+                height: 40vh;
+            }
+
+            #play-as h1{
+                font-size: 25px;
+            }
+
+            #play-as h2{
+                font-size: 25px;
+                padding: 0 10px 0 10px;
+            }
+
+            nav{
+                font-size: 20px;
+            }  
         }
     </style>
 </head>
